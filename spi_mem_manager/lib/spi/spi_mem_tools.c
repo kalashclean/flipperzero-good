@@ -2,6 +2,7 @@
 #include <furi_hal_spi_config.h>
 #include "spi_mem_chip_i.h"
 #include "spi_mem_tools.h"
+#define TAG "MyCustomApp"
 
 static uint8_t spi_mem_tools_addr_to_byte_arr(uint32_t addr, uint8_t* cmd) {
     uint8_t len = 3; // TODO(add support of 4 bytes address mode)
@@ -89,6 +90,7 @@ bool spi_mem_tools_read_block(SPIMemChip* chip, size_t offset, uint8_t* data, si
     for(size_t i = 0; i < block_size; i += SPI_MEM_MAX_BLOCK_SIZE) {
         uint8_t cmd[4];
         if((offset + SPI_MEM_MAX_BLOCK_SIZE) > chip->size) return false;
+FURI_LOG_E(TAG, "Hello World: %s", "This is an example logger"); 
         if(!spi_mem_tools_trx(
                SPIMemChipCMDReadData,
                cmd,
