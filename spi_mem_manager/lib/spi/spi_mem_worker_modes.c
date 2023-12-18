@@ -59,6 +59,8 @@ static void spi_mem_worker_chip_detect_process(SPIMemWorker* worker) {
 
 // Read
 static bool spi_mem_worker_read(SPIMemWorker* worker, SPIMemCustomEventWorker* event) {
+    FURI_LOG_T("myCustomApp", "WHello World: %s", "This is an example logger"); 
+
     uint8_t data_buffer[SPI_MEM_FILE_BUFFER_SIZE];
     size_t chip_size = spi_mem_chip_get_size(worker->chip_info);
     size_t offset = 0;
