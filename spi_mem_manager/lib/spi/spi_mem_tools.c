@@ -86,7 +86,6 @@ bool spi_mem_tools_check_chip_info(SPIMemChip* chip) {
 }
 
 bool spi_mem_tools_read_block(SPIMemChip* chip, size_t offset, uint8_t* data, size_t block_size) {
-    if(!spi_mem_tools_check_chip_info(chip)) return false;
     for(size_t i = 0; i < block_size; i += SPI_MEM_MAX_BLOCK_SIZE) {
         uint8_t cmd[4];
         if((offset + SPI_MEM_MAX_BLOCK_SIZE) > chip->size) return false;
