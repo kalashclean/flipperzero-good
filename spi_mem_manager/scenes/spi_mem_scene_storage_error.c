@@ -16,7 +16,7 @@ void spi_mem_scene_storage_error_on_enter(void* context) {
         app->widget, GuiButtonTypeLeft, "Back", spi_mem_scene_storage_error_widget_callback, app);
     widget_add_string_element(
         app->widget, 85, 15, AlignCenter, AlignBottom, FontPrimary, "Storage error");
-    widget_add_string_multiline_element(
+    //widget_add_string_multiline_element(
         app->widget,
         85,
         52,
