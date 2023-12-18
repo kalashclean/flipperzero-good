@@ -64,7 +64,7 @@ void spi_mem_scene_chip_detected_on_enter(void* context) {
     widget_add_button_element(
         app->widget, GuiButtonTypeLeft, "Retry", spi_mem_scene_chip_detected_widget_callback, app);
     spi_mem_scene_chip_detect_draw_next_button(app);
-    widget_add_icon_element(app->widget, 0, 12, &I_Dip8_32x36);
+    //widget_add_icon_element(app->widget, 0, 12, &I_Dip8_32x36);
     widget_add_string_element(
         app->widget, 64, 9, AlignCenter, AlignBottom, FontPrimary, "Detected SPI chip");
     spi_mem_scene_chip_detected_print_chip_info(app->widget, app->chip_info);
