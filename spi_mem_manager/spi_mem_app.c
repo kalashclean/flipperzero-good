@@ -71,6 +71,7 @@ SPIMemApp* spi_mem_alloc(void) {
     furi_hal_power_enable_otg();
     furi_hal_spi_bus_handle_init(&furi_hal_spi_bus_handle_external);
     scene_manager_next_scene(instance->scene_manager, SPIMemSceneStart);
+    FURI_LOG_T("myCustomApp", "A2Hello World: %s", "This is an example logger"); 
     return instance;
 } //-V773
 
