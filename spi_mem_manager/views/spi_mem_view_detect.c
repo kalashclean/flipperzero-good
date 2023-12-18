@@ -19,6 +19,7 @@ View* spi_mem_view_detect_get_view(SPIMemDetectView* app) {
 
 static void spi_mem_view_detect_draw_callback(Canvas* canvas, void* context) {
     //SPIMemDetectViewModel* model = context;
+    int a = context 
     canvas_set_font(canvas, FontPrimary);
     //canvas_draw_icon_animation(canvas, 0, 0, model->icon);
     canvas_draw_str_aligned(canvas, 64, 26, AlignLeft, AlignCenter, "Detect");
