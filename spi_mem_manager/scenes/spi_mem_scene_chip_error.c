@@ -22,7 +22,7 @@ void spi_mem_scene_chip_error_on_enter(void* context) {
         AlignBottom,
         FontSecondary,
         "Error while\ncommunicating\nwith chip");
-    widget_add_icon_element(app->widget, 5, 6, &I_Dip8_32x36);
+    //widget_add_icon_element(app->widget, 5, 6, &I_Dip8_32x36);
     view_dispatcher_switch_to_view(app->view_dispatcher, SPIMemViewWidget);
 }
 
