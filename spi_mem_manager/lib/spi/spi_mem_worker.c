@@ -17,13 +17,21 @@ static int32_t spi_mem_worker_thread(void* thread_context);
 SPIMemWorker* spi_mem_worker_alloc() {
     FURI_LOG_T("myCustomApp", "W3Hello World: %s", "This is an example logger"); 
     SPIMemWorker* worker = malloc(sizeof(SPIMemWorker));
+    FURI_LOG_T("myCustomApp", "W4Hello World: %s", "This is an example logger"); 
     worker->callback = NULL;
+    FURI_LOG_T("myCustomApp", "W5Hello World: %s", "This is an example logger"); 
     worker->thread = furi_thread_alloc();
+    FURI_LOG_T("myCustomApp", "W6Hello World: %s", "This is an example logger"); 
     worker->mode_index = SPIMemWorkerModeIdle;
+    FURI_LOG_T("myCustomApp", "W7Hello World: %s", "This is an example logger"); 
     furi_thread_set_name(worker->thread, "SPIMemWorker");
+    FURI_LOG_T("myCustomApp", "W8Hello World: %s", "This is an example logger"); 
     furi_thread_set_callback(worker->thread, spi_mem_worker_thread);
+    FURI_LOG_T("myCustomApp", "W9Hello World: %s", "This is an example logger"); 
     furi_thread_set_context(worker->thread, worker);
+    FURI_LOG_T("myCustomApp", "W10Hello World: %s", "This is an example logger"); 
     furi_thread_set_stack_size(worker->thread, 10240);
+    FURI_LOG_T("myCustomApp", "W11Hello World: %s", "This is an example logger"); 
     return worker;
 }
 
