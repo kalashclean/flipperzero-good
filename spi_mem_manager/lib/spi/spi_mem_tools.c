@@ -86,10 +86,11 @@ bool spi_mem_tools_check_chip_info(SPIMemChip* chip) {
 }
 
 bool spi_mem_tools_read_block(SPIMemChip* chip, size_t offset, uint8_t* data, size_t block_size) {
+FURI_LOG_T(TAG, "1Hello World: %s", "This is an example logger");    
     for(size_t i = 0; i < block_size; i += SPI_MEM_MAX_BLOCK_SIZE) {
         uint8_t cmd[4];
         if((offset + SPI_MEM_MAX_BLOCK_SIZE) > chip->size) return false;
-FURI_LOG_E(TAG, "Hello World: %s", "This is an example logger"); 
+FURI_LOG_T(TAG, "Hello World: %s", "This is an example logger"); 
         if(!spi_mem_tools_trx(
                SPIMemChipCMDReadData,
                cmd,
