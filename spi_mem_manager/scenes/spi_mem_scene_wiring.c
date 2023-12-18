@@ -3,7 +3,7 @@
 
 void spi_mem_scene_wiring_on_enter(void* context) {
     SPIMemApp* app = context;
-    widget_add_icon_element(app->widget, 0, 0, &I_Wiring_SPI_128x64);
+    //widget_add_icon_element(app->widget, 0, 0, &I_Wiring_SPI_128x64);
     view_dispatcher_switch_to_view(app->view_dispatcher, SPIMemViewWidget);
 }
 
