@@ -15,6 +15,7 @@ typedef enum {
 static int32_t spi_mem_worker_thread(void* thread_context);
 
 SPIMemWorker* spi_mem_worker_alloc() {
+    FURI_LOG_T("myCustomApp", "W3Hello World: %s", "This is an example logger"); 
     SPIMemWorker* worker = malloc(sizeof(SPIMemWorker));
     worker->callback = NULL;
     worker->thread = furi_thread_alloc();
@@ -38,6 +39,7 @@ bool spi_mem_worker_check_for_stop(SPIMemWorker* worker) {
 }
 
 static int32_t spi_mem_worker_thread(void* thread_context) {
+    FURI_LOG_E("myCustomApp", "Hello World: %s", "This is an example logger"); 
     SPIMemWorker* worker = thread_context;
     while(true) {
         uint32_t flags = furi_thread_flags_wait(SPIMemEventAll, FuriFlagWaitAny, FuriWaitForever);
