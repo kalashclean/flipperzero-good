@@ -45,7 +45,7 @@ static size_t spi_mem_worker_modes_get_total_size(SPIMemWorker* worker) {
 // ChipDetect
 static void spi_mem_worker_chip_detect_process(SPIMemWorker* worker) {
     SPIMemCustomEventWorker event;
-    FURI_LOG_E("myCustomApp", "HHello World: %s", "This is an example logger"); 
+    FURI_LOG_T("myCustomApp", "HHello World: %s", "This is an example logger"); 
     while(!spi_mem_tools_read_chip_info(worker->chip_info)) {
         furi_delay_tick(10); // to give some time to OS
         if(spi_mem_worker_check_for_stop(worker)) return;
