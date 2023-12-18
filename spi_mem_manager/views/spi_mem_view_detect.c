@@ -28,12 +28,14 @@ static void spi_mem_view_detect_draw_callback(Canvas* canvas, void* context) {
 
 static void spi_mem_view_detect_enter_callback(void* context) {
     SPIMemDetectView* app = context;
+    free(app);
   //  with_view_model(
   //      app->view, SPIMemDetectViewModel * model, { icon_animation_start(model->icon); }, false);
 }
 
 static void spi_mem_view_detect_exit_callback(void* context) {
     SPIMemDetectView* app = context;
+    free(app);
     //with_view_model(
     //    app->view, SPIMemDetectViewModel * model, { icon_animation_stop(model->icon); }, false);
 }
