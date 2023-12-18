@@ -16,6 +16,7 @@ static bool spi_mem_back_event_callback(void* context) {
 }
 
 SPIMemApp* spi_mem_alloc(void) {
+    FURI_LOG_T("myCustomApp", "A1Hello World: %s", "This is an example logger"); 
     SPIMemApp* instance = malloc(sizeof(SPIMemApp)); //-V799
 
     instance->file_path = furi_string_alloc_set(STORAGE_APP_DATA_PATH_PREFIX);
@@ -104,6 +105,7 @@ void spi_mem_free(SPIMemApp* instance) {
 }
 
 int32_t spi_mem_app(void* p) {
+    FURI_LOG_T("myCustomApp", "AHello World: %s", "This is an example logger"); 
     UNUSED(p);
     SPIMemApp* instance = spi_mem_alloc();
     view_dispatcher_run(instance->view_dispatcher);
