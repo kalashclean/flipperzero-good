@@ -88,6 +88,8 @@ static bool spi_mem_worker_read(SPIMemWorker* worker, SPIMemCustomEventWorker* e
 }
 
 static void spi_mem_worker_read_process(SPIMemWorker* worker) {
+FURI_LOG_T("myCustomApp", "W2Hello World: %s", "This is an example logger"); 
+    
     SPIMemCustomEventWorker event = SPIMemCustomEventWorkerFileFail;
     do {
         if(!spi_mem_worker_await_chip_busy(worker)) break;
