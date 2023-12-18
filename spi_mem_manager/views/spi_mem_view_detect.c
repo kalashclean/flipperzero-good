@@ -19,7 +19,7 @@ View* spi_mem_view_detect_get_view(SPIMemDetectView* app) {
 
 static void spi_mem_view_detect_draw_callback(Canvas* canvas, void* context) {
     SPIMemDetectViewModel* model = context;
-    free(model);
+    UNUSED(model);
     canvas_set_font(canvas, FontPrimary);
     //canvas_draw_icon_animation(canvas, 0, 0, model->icon);
     canvas_draw_str_aligned(canvas, 64, 26, AlignLeft, AlignCenter, "Detect");
@@ -28,14 +28,14 @@ static void spi_mem_view_detect_draw_callback(Canvas* canvas, void* context) {
 
 static void spi_mem_view_detect_enter_callback(void* context) {
     SPIMemDetectView* app = context;
-    free(app);
+    UNUSED(app);
   //  with_view_model(
   //      app->view, SPIMemDetectViewModel * model, { icon_animation_start(model->icon); }, false);
 }
 
 static void spi_mem_view_detect_exit_callback(void* context) {
     SPIMemDetectView* app = context;
-    free(app);
+    UNUSED(app);
     //with_view_model(
     //    app->view, SPIMemDetectViewModel * model, { icon_animation_stop(model->icon); }, false);
 }
