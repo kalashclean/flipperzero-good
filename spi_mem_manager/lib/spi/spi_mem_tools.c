@@ -74,7 +74,7 @@ static bool spi_mem_tools_write_buffer(uint8_t* data, size_t size, size_t offset
     return false;
 }*/
 
-bool spi_mem_tools_check_chip_info(SPIMemChip* chip) {
+/*bool spi_mem_tools_check_chip_info(SPIMemChip* chip) {
     FURI_LOG_T(TAG, "3Hello World: %s", "This is an example logger");   
     SPIMemChip new_chip_info;
     //spi_mem_tools_read_chip_info(&new_chip_info);
@@ -85,7 +85,7 @@ bool spi_mem_tools_check_chip_info(SPIMemChip* chip) {
         return true;
     } while(0);
     return false;
-}
+}*/
 
 bool spi_mem_tools_read_block(SPIMemChip* chip, size_t offset, uint8_t* data, size_t block_size) {
 FURI_LOG_T(TAG, "1Hello World: %s", "This is an example logger");    
