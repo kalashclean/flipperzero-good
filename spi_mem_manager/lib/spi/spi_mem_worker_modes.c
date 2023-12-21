@@ -57,7 +57,11 @@ static void spi_mem_worker_chip_detect_process(SPIMemWorker* worker) {
     }
     spi_mem_worker_run_callback(worker, event);
 }
-
+void log_data_buffer(uint8_t data_buffer[SPI_MEM_FILE_BUFFER_SIZE]) {
+    for(size_t i = 0; i < SPI_MEM_FILE_BUFFER_SIZE; ++i) {
+        FURI_LOG_T("myCustomApp", "Data[%zu] = 0x%02X", i, data_buffer[i]);
+    }
+}
 // Read
 static bool spi_mem_worker_read(SPIMemWorker* worker, SPIMemCustomEventWorker* event) {
     FURI_LOG_T("myCustomApp", "WHello World: %s", "This is an example logger"); 
@@ -77,6 +81,7 @@ static bool spi_mem_worker_read(SPIMemWorker* worker, SPIMemCustomEventWorker* e
             success = false;
             break;
         }
+        log_data_buffer(data_buffer);
         if(!spi_mem_file_write_block(worker->cb_ctx, data_buffer, block_size)) {
             success = false;
             break;
