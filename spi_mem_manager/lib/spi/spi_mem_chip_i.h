@@ -46,7 +46,7 @@ typedef enum {
 } SPIMemChipVendor;
 
 typedef enum {
-    SPIMemChipCMDReadJEDECChipID = 0x9F,
+    SPIMemChipCMDReadJEDECChipID = 0x03,
     SPIMemChipCMDReadData = 0x03,
     SPIMemChipCMDChipErase = 0xC7,
     SPIMemChipCMDWriteEnable = 0x06,
