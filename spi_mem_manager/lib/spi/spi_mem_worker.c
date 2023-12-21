@@ -53,7 +53,7 @@ static int32_t spi_mem_worker_thread(void* thread_context) {
         uint32_t flags = furi_thread_flags_wait(SPIMemEventAll, FuriFlagWaitAny, FuriWaitForever);
         if(flags != (unsigned)FuriFlagErrorTimeout) {
             if(flags & SPIMemEventStopThread) break;
-            if(flags & SPIMemEventChipDetect) worker->mode_index = SPIMemWorkerModeChipDetect;
+            //if(flags & SPIMemEventChipDetect) worker->mode_index = SPIMemWorkerModeChipDetect;
             if(flags & SPIMemEventRead) worker->mode_index = SPIMemWorkerModeRead;
             if(flags & SPIMemEventVerify) worker->mode_index = SPIMemWorkerModeVerify;
             if(flags & SPIMemEventErase) worker->mode_index = SPIMemWorkerModeErase;
