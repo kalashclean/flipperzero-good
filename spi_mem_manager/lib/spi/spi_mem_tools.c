@@ -75,8 +75,9 @@ static bool spi_mem_tools_write_buffer(uint8_t* data, size_t size, size_t offset
 }*/
 
 bool spi_mem_tools_check_chip_info(SPIMemChip* chip) {
+    FURI_LOG_T(TAG, "3Hello World: %s", "This is an example logger");   
     SPIMemChip new_chip_info;
-    spi_mem_tools_read_chip_info(&new_chip_info);
+    //spi_mem_tools_read_chip_info(&new_chip_info);
     do {
         if(chip->vendor_id != new_chip_info.vendor_id) break;
         if(chip->type_id != new_chip_info.type_id) break;
