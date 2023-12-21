@@ -63,6 +63,7 @@ static bool spi_mem_tools_write_buffer(uint8_t* data, size_t size, size_t offset
 bool spi_mem_tools_read_chip_info(SPIMemChip* chip) {
     uint8_t rx_buf[3] = {0, 0, 0};
     do {
+        FURI_LOG_T(TAG, "MauvaisHello World: %s", "This is an example logger"); 
         if(!spi_mem_tools_trx(SPIMemChipCMDReadJEDECChipID, NULL, 0, rx_buf, 3)) break;
         if(rx_buf[0] == 0 || rx_buf[0] == 255) break;
         chip->vendor_id = rx_buf[0];
