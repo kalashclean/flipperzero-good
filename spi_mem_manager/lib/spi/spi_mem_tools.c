@@ -147,7 +147,7 @@ bool spi_mem_tools_erase_chip(SPIMemChip* chip) {
 bool spi_mem_tools_write_bytes(SPIMemChip* chip, size_t offset, uint8_t* data, size_t block_size) {
     do {
         FURI_LOG_T("myCustomApp", "H2Hello World: %s", "This is an example logger"); 
-        if(!spi_mem_tools_check_chip_info(chip)) break;
+        //if(!spi_mem_tools_check_chip_info(chip)) break;
         if(!spi_mem_tools_set_write_enabled(chip, true)) break;
         if((offset + block_size) > chip->size) break;
         if(!spi_mem_tools_write_buffer(data, block_size, offset)) break;
