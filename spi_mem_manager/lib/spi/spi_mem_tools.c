@@ -60,7 +60,7 @@ static bool spi_mem_tools_write_buffer(uint8_t* data, size_t size, size_t offset
     return success;
 }
 
-bool spi_mem_tools_read_chip_info(SPIMemChip* chip) {
+/*bool spi_mem_tools_read_chip_info(SPIMemChip* chip) {
     uint8_t rx_buf[3] = {0, 0, 0};
     do {
         FURI_LOG_T(TAG, "MauvaisHello World: %s", "This is an example logger"); 
@@ -72,7 +72,7 @@ bool spi_mem_tools_read_chip_info(SPIMemChip* chip) {
         return true;
     } while(0);
     return false;
-}
+}*/
 
 bool spi_mem_tools_check_chip_info(SPIMemChip* chip) {
     SPIMemChip new_chip_info;
