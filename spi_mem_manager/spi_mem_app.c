@@ -34,7 +34,7 @@ SPIMemApp* spi_mem_alloc(void) {
     instance->chip_info = malloc(sizeof(SPIMemChip));
     found_chips_init(instance->found_chips);
     instance->view_progress = spi_mem_view_progress_alloc();
-    //instance->view_detect = spi_mem_view_detect_alloc();
+    instance->view_detect = spi_mem_view_detect_alloc();
     instance->text_input = text_input_alloc();
     instance->mode = SPIMemModeUnknown;
 
