@@ -61,10 +61,10 @@ SPIMemApp* spi_mem_alloc(void) {
         instance->view_dispatcher,
         SPIMemViewProgress,
         spi_mem_view_progress_get_view(instance->view_progress));
-    /*view_dispatcher_add_view(
+    view_dispatcher_add_view(
         instance->view_dispatcher,
         SPIMemViewDetect,
-        spi_mem_view_detect_get_view(instance->view_detect));*/
+        spi_mem_view_detect_get_view(instance->view_detect));
     view_dispatcher_add_view(
         instance->view_dispatcher, SPIMemViewTextInput, text_input_get_view(instance->text_input));
 
